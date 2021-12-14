@@ -77,7 +77,7 @@ grails.project.dependency.resolution = {
         compile 'org.apache.commons:commons-text:1.3'
         compile 'commons-lang:commons-lang:2.6'
         compile "org.jadira.usertype:usertype.jodatime:1.9"
-        compile 'org.apache.commons:commons-csv:1.6'
+        compile 'org.apache.commons:commons-csv:1.6'  // last Java 7-compatible release
 
         // Required by LDAP
         compile "com.unboundid:unboundid-ldapsdk:2.3.6"
@@ -162,7 +162,6 @@ grails.project.dependency.resolution = {
         runtime(':excel-import:0.3') { excludes 'poi-contrib', 'poi-scratchpad' }
         runtime(':external-config-reload:1.4.0') { exclude 'spock-grails-support' }
         runtime(':quartz2:2.1.6.2')
-        compile(":csv:0.3.1")  // FIXME continue migrating to commons-csv instead
 
         // Unsure if used
         runtime(':mail:1.0.6') { excludes 'mail', 'spring-test' }
